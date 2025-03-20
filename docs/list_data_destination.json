@@ -1,0 +1,299 @@
+{
+  "status": "success",
+  "data": [
+    {
+      "title": "Bali Beach",
+      "description": "Beautiful beach with white sand and clear water.",
+      "location": "Bali, Indonesia",
+      "price": 20000100,
+      "tax": 2000000,
+      "total_pax_available": 50,
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSNNOlQZDtq4ApuearKcLHrnO4QAjs9xCJkZPPi1lfxCBynkETmH4wENkgHL2g0Fb8L7dyQak4kKzbTCboSiqo1naHiVpLrle2L2BUl6w",
+      "rating": 4.8,
+      "reviews": [
+        {
+          "user": "John Doe",
+          "comment": "Amazing place, had a great time!",
+          "rating": 5
+        },
+        {
+          "user": "Jane Smith",
+          "comment": "Beautiful beach but a bit crowded.",
+          "rating": 4
+        }
+      ],
+      "images": [
+        {
+          "url": "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSNNOlQZDtq4ApuearKcLHrnO4QAjs9xCJkZPPi1lfxCBynkETmH4wENkgHL2g0Fb8L7dyQak4kKzbTCboSiqo1naHiVpLrle2L2BUl6w"
+        },
+        {
+          "url": "https://international.unud.ac.id/protected/storage/file_summernote/4a0885ebc3c02b217cbf6c079eca6b37.jpg"
+        },
+        {
+          "url": "https://perkantas.net/wp-content/uploads/2022/02/BALI-1.jpg"
+        },
+        {
+          "url": "https://media.istockphoto.com/id/1485106198/photo/diamond-beach-is-one-of-the-most-visited-beaches-in-nusa-penida-indonesia.jpg?s=612x612&w=0&k=20&c=6Zo4FsY2Q0tGtAuLAbvUFi9oOYoogb_mTfYVIqliJIg="
+        }
+      ]
+    },
+    {
+      "title": "Eiffel Tower",
+      "description": "Iconic tower in Paris with stunning views.",
+      "location": "Paris, France",
+      "price": 20000150,
+      "tax": 2000000,
+      "total_pax_available": 100,
+      "thumbnail": "https://cdn.britannica.com/31/255531-050-B7E07090/eiffel-tower-paris-france-champ-de-mars-view.jpg",
+      "rating": 4.7,
+      "reviews": [
+        {
+          "user": "Alice Brown",
+          "comment": "Breathtaking views from the top!",
+          "rating": 5
+        },
+        {
+          "user": "Bob Johnson",
+          "comment": "A must-see in Paris.",
+          "rating": 4
+        }
+      ],
+      "images": [
+        {
+          "url": "https://cdn.britannica.com/31/255531-050-B7E07090/eiffel-tower-paris-france-champ-de-mars-view.jpg"
+        },
+        {
+          "url": "https://www.placestotravel.com/wp-content/uploads/2024/03/Landscaped-Gardens-under-the-Eiffel-Tower.jpg"
+        },
+        {
+          "url": "https://pro.visitparisregion.com/var/crt_idf/storage/images/_aliases/xlarge/6/3/9/7/1107936-1-fre-FR/OOSHOT_ATOUTPARIS_HIVER2018_5%20copie.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Great Wall of China",
+      "description": "Historic wall with breathtaking scenery.",
+      "location": "China",
+      "price": 20000200,
+      "tax": 2000000,
+      "total_pax_available": 200,
+      "thumbnail": "https://www.travelandleisure.com/thmb/b2-ee45Q1DEjuzOa51XLhJ7Rfmc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/great-wall-china-tourists-GWOC0417-10bddbf0783644c386178f62117b2132.jpg",
+      "rating": 4.9,
+      "reviews": [
+        {
+          "user": "Charlie Lee",
+          "comment": "Incredible experience, highly recommend!",
+          "rating": 5
+        },
+        {
+          "user": "Dana White",
+          "comment": "A bit tiring but worth it.",
+          "rating": 4
+        }
+      ],
+      "images": [
+        {
+          "url": "https://www.travelandleisure.com/thmb/b2-ee45Q1DEjuzOa51XLhJ7Rfmc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/great-wall-china-tourists-GWOC0417-10bddbf0783644c386178f62117b2132.jpg"
+        },
+        {
+          "url": "https://images.chinahighlights.com/allpicture/2017/09/f70fec5c314247cea2c85a86_cut_800x500_9.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Machu Picchu",
+      "description": "Ancient Incan city with stunning views.",
+      "location": "Peru",
+      "price": 20000180,
+      "tax": 2000000,
+      "total_pax_available": 150,
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Machu_Picchu%2C_Peru.jpg/1200px-Machu_Picchu%2C_Peru.jpg",
+      "rating": 4.8,
+      "reviews": [
+        {
+          "user": "Grace White",
+          "comment": "A once in a lifetime experience!",
+          "rating": 5
+        },
+        {
+          "user": "Hank Brown",
+          "comment": "Amazing views but very crowded.",
+          "rating": 4
+        }
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Machu_Picchu%2C_Peru.jpg/1200px-Machu_Picchu%2C_Peru.jpg"
+        },
+        {
+          "url": "https://img.static-rmg.be/a/view/q75/w962/h503/3724318/9573747-jpg.jpg"
+        },
+        {
+          "url": "https://www.intrepidtravel.com/adventures/wp-content/uploads/2024/07/Intrepid-Travel-Peru-Machu-Picchu-women-of-Sacred-Valley-6477.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Sydney Opera House",
+      "description": "Iconic performing arts center in Sydney.",
+      "location": "Sydney, Australia",
+      "price": 20000130,
+      "tax": 2000000,
+      "total_pax_available": 120,
+      "thumbnail": "https://sydneyharbourhotel.com/wordpress/wp-content/uploads/2023/12/hero-location.jpg",
+      "rating": 4.6,
+      "reviews": [
+        {
+          "user": "Kate Green",
+          "comment": "Beautiful architecture!",
+          "rating": 5
+        },
+        {
+          "user": "Liam White",
+          "comment": "Great place for a show.",
+          "rating": 4
+        }
+      ],
+      "images": [
+        {
+          "url": "https://sydneyharbourhotel.com/wordpress/wp-content/uploads/2023/12/hero-location.jpg"
+        },
+        {
+          "url": "https://assets.atdw-online.com.au/images/082abec166a817adfae646daff53ad70.jpeg?rect=0%2C0%2C2048%2C1536&w=745&h=559&&rot=360&q=eyJ0eXBlIjoibGlzdGluZyIsImxpc3RpbmdJZCI6IjU2YjIzYzkyZDVmMTU2NTA0NWQ4MTBkMiIsImRpc3RyaWJ1dG9ySWQiOiI1NmIxZWI5MzQ0ZmVjYTNkZjJlMzIwYzgiLCJhcGlrZXlJZCI6IjU2YjFlZTU5MGNmMjEzYWQyMGRjNTgxOSJ9"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Sydneyoperahouse_at_night.jpg/1200px-Sydneyoperahouse_at_night.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Niagara Falls",
+      "description": "Spectacular waterfalls on the border of USA and Canada.",
+      "location": "USA/Canada",
+      "price": 2000070,
+      "tax": 2000000,
+      "total_pax_available": 250,
+      "thumbnail": "https://mediaim.expedia.com/destination/9/fc5fed6c18be78c110ea6b109c1581c2.jpg",
+      "rating": 4.8,
+      "reviews": [
+        {
+          "user": "Olivia Green",
+          "comment": "The falls are breathtaking!",
+          "rating": 5
+        },
+        {
+          "user": "Paul White",
+          "comment": "A bit wet but amazing.",
+          "rating": 4
+        }
+      ],
+      "images": [
+        {
+          "url": "https://mediaim.expedia.com/destination/9/fc5fed6c18be78c110ea6b109c1581c2.jpg"
+        },
+        {
+          "url": "https://www.hojobythefalls.com/wp-content/uploads/2020/01/Horseshoe-Falls-Table-Rock-500-380.jpg"
+        },
+        {
+          "url": "https://cdn-imgix.headout.com/media/images/88eaaff80da21713d8dfc36f30325a99-niagarafalls5.jpg?auto=format&q=90&fit=crop&crop=faces"
+        }
+      ]
+    },
+    {
+      "title": "Colosseum",
+      "description": "Ancient amphitheater in Rome.",
+      "location": "Rome, Italy",
+      "price": 20000140,
+      "tax": 2000000,
+      "total_pax_available": 90,
+      "thumbnail": "https://cdn.mos.cms.futurecdn.net/BiNbcY5fXy9Lra47jqHKGK.jpg",
+      "rating": 4.7,
+      "reviews": [
+        {
+          "user": "Quinn Black",
+          "comment": "A must-see in Rome.",
+          "rating": 5
+        },
+        {
+          "user": "Rachel Green",
+          "comment": "Very historic and impressive.",
+          "rating": 4
+        }
+      ],
+      "images": [
+        {
+          "url": "https://cdn.mos.cms.futurecdn.net/BiNbcY5fXy9Lra47jqHKGK.jpg"
+        },
+        {
+          "url": "https://deih43ym53wif.cloudfront.net/colosseum-rome-italy-shutterstock_1043811994_1dbce78442.jpeg"
+        },
+        {
+          "url": "https://vatican-tickets.tours/wp-content/uploads/2023/12/vatican-and-colosseum-tour-1.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Taj Mahal",
+      "description": "Beautiful mausoleum in India.",
+      "location": "Agra, India",
+      "price": 20000150,
+      "tax": 2000000,
+      "total_pax_available": 160,
+      "thumbnail": "https://fatek.umsu.ac.id/wp-content/uploads/2023/05/Arsitektur-Dunia-Taj-Mahal.jpeg",
+      "rating": 4.8,
+      "reviews": [
+        {
+          "user": "Yara Green",
+          "comment": "A masterpiece of architecture.",
+          "rating": 5
+        },
+        {
+          "user": "Zane White",
+          "comment": "Very crowded but beautiful.",
+          "rating": 4
+        }
+      ],
+      "images": [
+        {
+          "url": "https://fatek.umsu.ac.id/wp-content/uploads/2023/05/Arsitektur-Dunia-Taj-Mahal.jpeg"
+        },
+        {
+          "url": "https://www.thetimes.com/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F7704b969-531c-497b-879e-493385f52ceb.jpg?crop=1564%2C880%2C318%2C0&resize=1200"
+        }
+      ]
+    },
+    {
+      "title": "Mount Fuji",
+      "description": "Iconic mountain in Japan.",
+      "location": "Japan",
+      "price": 2000090,
+      "tax": 2000000,
+      "total_pax_available": 180,
+      "thumbnail": "https://tokyotravel.co.id/wp-content/uploads/2024/03/32.jpeg",
+      "rating": 4.7,
+      "reviews": [
+        {
+          "user": "Amy Brown",
+          "comment": "Beautiful mountain views.",
+          "rating": 5
+        },
+        {
+          "user": "Brian Black",
+          "comment": "A bit challenging to climb but worth it.",
+          "rating": 4
+        }
+      ],
+      "images": [
+        {
+          "url": "https://tokyotravel.co.id/wp-content/uploads/2024/03/32.jpeg"
+        },
+        {
+          "url": "https://globetrottingpeanuts.com/wp-content/uploads/2019/12/78548756_472269696758257_4435786229820162048_n.jpg?w=1200"
+        },
+        {
+          "url": "https://cdn.britannica.com/96/196396-050-13758154/Chureito-Pagoda-Arakura-Sengen-Shrine-Mount-Fuji.jpg"
+        }
+      ]
+    }
+  ]
+}
