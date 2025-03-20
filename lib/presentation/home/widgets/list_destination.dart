@@ -38,7 +38,9 @@ class _ListDestinationViewState extends State<ListDestinationView> {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
+    return GridView.builder(
+      shrinkWrap: true,
+      physics: NeverScrollableScrollPhysics(),
       itemCount: data.length,
       itemBuilder: (context, index) {
         var destinationData = data[index];
@@ -73,76 +75,111 @@ class _ListDestinationViewState extends State<ListDestinationView> {
             ),
             width: double.infinity,
             padding: EdgeInsets.all(8),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
+            child: Column(
               children: [
-                Expanded(
-                  flex: 4,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(10),
-                    child: Image.network(
-                      destinationData.thumbnail,
-                      fit: BoxFit.cover,
-                      height: MediaQuery.of(context).size.height * 0.12,
+                Stack(
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: Image.network(
+                        destinationData.thumbnail,
+                        fit: BoxFit.cover,
+                        width: double.infinity,
+                        height: MediaQuery.of(context).size.height * 0.12,
+                      ),
                     ),
-                  ),
-                ),
-                SizedBox(width: 12),
-                Expanded(
-                  flex: 6,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 2.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          destinationData.title,
+                    Positioned(
+                      right: 8,
+                      top: 8,
+                      child: Container(
+                        padding: EdgeInsets.all(4),
+                        decoration: BoxDecoration(
+                          color: Colors.red,
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                        child: Text(
+                          'Promo',
                           style: TextStyle(
-                            fontSize: 20,
+                            color: Colors.white,
+                            fontSize: 10,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        Text(
-                          destinationData.location,
-                          style: TextStyle(fontSize: 12),
-                        ),
-                        SizedBox(height: 4),
-                        Row(
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      flex: 6,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 2.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Icon(
-                              Icons.star,
-                              size: 18,
-                              color: const Color.fromARGB(255, 255, 154, 59),
+                            SizedBox(height: 4),
+                            Text(
+                              destinationData.title,
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                             Text(
-                              " ${destinationData.rating.toString()}",
+                              destinationData.location,
+                              style: TextStyle(fontSize: 12),
+                            ),
+                            SizedBox(height: 4),
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.star,
+                                  size: 18,
+                                  color: const Color.fromARGB(
+                                    255,
+                                    255,
+                                    154,
+                                    59,
+                                  ),
+                                ),
+                                Text(
+                                  " ${destinationData.rating.toString()}",
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+
+                            SizedBox(height: 2),
+                            Text(
+                              "Rp ${NumberFormat('#,##0', 'id_ID').format(destinationData.price)},-",
                               style: TextStyle(
                                 fontSize: 14,
+                                color: Colors.deepOrange,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                           ],
                         ),
-
-                        SizedBox(height: 2),
-                        Text(
-                          "Rp ${NumberFormat('#,##0', 'id_ID').format(destinationData.price)},-",
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: Colors.deepOrange,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
-                  ),
+                  ],
                 ),
               ],
             ),
           ),
         );
       },
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        childAspectRatio: 0.82,
+        crossAxisSpacing: 10,
+      ),
     );
   }
 }

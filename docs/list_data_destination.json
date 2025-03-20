@@ -70,36 +70,7 @@
         }
       ]
     },
-    {
-      "title": "Great Wall of China",
-      "description": "Historic wall with breathtaking scenery.",
-      "location": "China",
-      "price": 20000200,
-      "tax": 2000000,
-      "total_pax_available": 200,
-      "thumbnail": "https://www.travelandleisure.com/thmb/b2-ee45Q1DEjuzOa51XLhJ7Rfmc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/great-wall-china-tourists-GWOC0417-10bddbf0783644c386178f62117b2132.jpg",
-      "rating": 4.9,
-      "reviews": [
-        {
-          "user": "Charlie Lee",
-          "comment": "Incredible experience, highly recommend!",
-          "rating": 5
-        },
-        {
-          "user": "Dana White",
-          "comment": "A bit tiring but worth it.",
-          "rating": 4
-        }
-      ],
-      "images": [
-        {
-          "url": "https://www.travelandleisure.com/thmb/b2-ee45Q1DEjuzOa51XLhJ7Rfmc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/great-wall-china-tourists-GWOC0417-10bddbf0783644c386178f62117b2132.jpg"
-        },
-        {
-          "url": "https://images.chinahighlights.com/allpicture/2017/09/f70fec5c314247cea2c85a86_cut_800x500_9.jpg"
-        }
-      ]
-    },
+    
     {
       "title": "Machu Picchu",
       "description": "Ancient Incan city with stunning views.",
