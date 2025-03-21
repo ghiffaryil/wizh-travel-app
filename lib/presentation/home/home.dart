@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       appBar: AppBar(
         title: Text(
-          'Wizh Travel App',
+          'Wizh Travel',
           style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,

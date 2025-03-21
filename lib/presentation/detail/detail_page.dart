@@ -288,7 +288,7 @@ class _DetailPageState extends State<DetailPage> {
                   Container(
                     margin: EdgeInsets.only(top: 18),
                     child: Text(
-                      'The services provided by Ongis Travel have the following terms and conditions:',
+                      'The services provided by Wizh Travel have the following terms and conditions:',
                       style: TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.bold,
@@ -300,11 +300,11 @@ class _DetailPageState extends State<DetailPage> {
                     margin: EdgeInsets.only(top: 18),
                     child: Text(
                       '1. Registration down payment is at least 50% of the tour fee\n'
-                      '2. Participants are willing to fulfill the completeness of the document requirements requested by Ongis Travel, such as a valid KTP or identity card for insurance purposes\n'
+                      '2. Participants are willing to fulfill the completeness of the document requirements requested by Wizh Travel, such as a valid KTP or identity card for insurance purposes\n'
                       '3. Registration without a down payment is not binding and can be canceled without prior notification to the participant\n'
                       '4. Payment of tour fees is due on the tour day at the latest\n'
                       '5. Applicants who are over 70 years old, or have physical/mental limitations, must be accompanied by a family member/friend/relative of the participant during the tour\n'
-                      '6. If there is a special contract/agreement agreed upon by the tour participants and Ongis Travel, then the registration down payment, payment and other applicable terms can be adjusted to the contract/agreement',
+                      '6. If there is a special contract/agreement agreed upon by the tour participants and Wizh Travel, then the registration down payment, payment and other applicable terms can be adjusted to the contract/agreement',
                       style: TextStyle(fontSize: 12),
                     ),
                   ),
