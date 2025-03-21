@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:wizhapp/constant/component/shimmer/shimmer_card.dart';
 import 'package:wizhapp/models/list_destination_response_model.dart';
 import 'package:intl/intl.dart';
 import 'package:wizhapp/presentation/detail/detail_page.dart';
@@ -93,6 +94,10 @@ class _ListDestinationSectionState extends State<ListDestinationSection> {
                             fit: BoxFit.cover,
                             width: double.infinity,
                             height: MediaQuery.of(context).size.height * 0.12,
+                            loadingBuilder: (context, child, loadingProgress) {
+                              if (loadingProgress == null) return child;
+                              return shimmerCard(context, 0.12);
+                            },
                           ),
                         ),
                         Positioned(

@@ -23,7 +23,6 @@ class _BottomMenuState extends State<BottomMenu> {
   void initState() {
     super.initState();
     currentIndex = widget.selectedIndex;
-    print("Curent Index = $currentIndex");
   }
 
   void onTabTapped(int index) {

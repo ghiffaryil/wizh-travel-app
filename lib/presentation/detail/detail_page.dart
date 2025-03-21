@@ -1,7 +1,7 @@
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:shimmer/shimmer.dart';
+import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:wizhapp/constant/component/shimmer/shimmer_card.dart';
 import 'package:wizhapp/models/list_destination_response_model.dart';
 
 class DetailPage extends StatefulWidget {
@@ -20,8 +20,6 @@ class _DetailPageState extends State<DetailPage> {
     setState(() {
       isFavorite = !isFavorite;
     });
-
-    print("Is Favorite $isFavorite");
   }
 
   @override
@@ -44,14 +42,14 @@ class _DetailPageState extends State<DetailPage> {
         backgroundColor: Colors.blue,
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(17.0),
+        padding: const EdgeInsets.all(10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CarouselSlider(
               options: CarouselOptions(
                 animateToClosest: true,
-                viewportFraction: 0.95,
+                viewportFraction: 0.98,
                 initialPage: 0,
                 height: MediaQuery.of(context).size.height * 0.23,
                 enlargeCenterPage: false,
@@ -78,16 +76,7 @@ class _DetailPageState extends State<DetailPage> {
                                 loadingProgress,
                               ) {
                                 if (loadingProgress == null) return child;
-                                return Shimmer.fromColors(
-                                  baseColor: Colors.grey,
-                                  highlightColor: Colors.white,
-                                  child: Container(
-                                    height:
-                                        MediaQuery.of(context).size.height *
-                                        0.23,
-                                    color: Colors.grey,
-                                  ),
-                                );
+                                return shimmerCard(context, 0.23);
                               },
                             ),
                           ),
@@ -160,7 +149,7 @@ class _DetailPageState extends State<DetailPage> {
 
                   const SizedBox(height: 5),
                   Text(
-                    "Rp ${NumberFormat('#,##0', 'id_ID').format(destinationData.price + destinationData.tax)},-",
+                    "Rp ${NumberFormat('#,##0', 'id_ID').format(destinationData.price)},-",
                     style: TextStyle(
                       fontSize: 27,
                       fontWeight: FontWeight.bold,
@@ -172,7 +161,7 @@ class _DetailPageState extends State<DetailPage> {
                   Row(
                     children: [
                       Text(
-                        'Include Tax : ',
+                        'Exclude Tax : ',
                         style: TextStyle(
                           fontSize: 12,
                           color: const Color.fromARGB(255, 67, 65, 65),
@@ -181,11 +170,17 @@ class _DetailPageState extends State<DetailPage> {
                       Text(
                         "Rp ${NumberFormat('#,##0', 'id_ID').format(destinationData.tax)},-",
                         style: TextStyle(
-                          fontSize: 12,
+                          fontSize: 11,
                           color: const Color.fromARGB(255, 67, 65, 65),
                         ),
                       ),
                     ],
+                  ),
+
+                  SizedBox(height: 10),
+                  Text(
+                    "Total : Rp ${NumberFormat('#,##0', 'id_ID').format(destinationData.price + destinationData.tax)},-",
+                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                   ),
 
                   Container(
