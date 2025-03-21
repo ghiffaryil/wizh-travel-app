@@ -6,14 +6,14 @@ import 'package:intl/intl.dart';
 import 'package:wizhapp/models/list_destination_response_model.dart';
 import 'package:wizhapp/presentation/detail/detail_page.dart';
 
-class PrivateTripSection extends StatefulWidget {
-  const PrivateTripSection({super.key});
+class PrivateTripList extends StatefulWidget {
+  const PrivateTripList({super.key});
 
   @override
-  State<PrivateTripSection> createState() => _PrivateTripSectionState();
+  State<PrivateTripList> createState() => _PrivateTripListState();
 }
 
-class _PrivateTripSectionState extends State<PrivateTripSection> {
+class _PrivateTripListState extends State<PrivateTripList> {
   final List<ListDestinationData> data = [];
   int currentIndex = 0;
 

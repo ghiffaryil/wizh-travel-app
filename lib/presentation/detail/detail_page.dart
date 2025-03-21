@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:shimmer/shimmer.dart';
 import 'package:wizhapp/models/list_destination_response_model.dart';
 
 class DetailPage extends StatefulWidget {
@@ -13,6 +14,16 @@ class DetailPage extends StatefulWidget {
 }
 
 class _DetailPageState extends State<DetailPage> {
+  bool isFavorite = false;
+
+  void setfavorite() {
+    setState(() {
+      isFavorite = !isFavorite;
+    });
+
+    print("Is Favorite $isFavorite");
+  }
+
   @override
   Widget build(BuildContext context) {
     var destinationData = widget.destinationData;
@@ -61,6 +72,23 @@ class _DetailPageState extends State<DetailPage> {
                               fit: BoxFit.cover,
                               height: MediaQuery.of(context).size.height * 0.23,
                               width: double.infinity,
+                              loadingBuilder: (
+                                context,
+                                child,
+                                loadingProgress,
+                              ) {
+                                if (loadingProgress == null) return child;
+                                return Shimmer.fromColors(
+                                  baseColor: Colors.grey,
+                                  highlightColor: Colors.white,
+                                  child: Container(
+                                    height:
+                                        MediaQuery.of(context).size.height *
+                                        0.23,
+                                    color: Colors.grey,
+                                  ),
+                                );
+                              },
                             ),
                           ),
                         );
@@ -80,10 +108,12 @@ class _DetailPageState extends State<DetailPage> {
                       Text(
                         destinationData.title,
                         style: const TextStyle(
-                          fontSize: 26,
+                          fontSize: 23,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
+                      Spacer(flex: 2),
+                      SizedBox(width: 10),
                       Container(
                         padding: EdgeInsets.all(8),
                         decoration: BoxDecoration(
@@ -101,6 +131,17 @@ class _DetailPageState extends State<DetailPage> {
                               ),
                             ),
                           ],
+                        ),
+                      ),
+
+                      IconButton(
+                        onPressed: () {
+                          setfavorite();
+                        },
+                        icon: Icon(
+                          isFavorite ? Icons.favorite : Icons.favorite_outline,
+                          color: Colors.red,
+                          size: 35,
                         ),
                       ),
                     ],

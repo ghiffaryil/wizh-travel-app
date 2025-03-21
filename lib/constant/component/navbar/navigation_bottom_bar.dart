@@ -13,12 +13,17 @@ class BottomMenu extends StatefulWidget {
 class _BottomMenuState extends State<BottomMenu> {
   late int currentIndex;
 
-  final List<Widget> pages = [const HomePage(), const HomePage()];
+  final List<Widget> pages = [
+    const HomePage(index: 0),
+    const HomePage(index: 1),
+    const HomePage(index: 2),
+  ];
 
   @override
   void initState() {
     super.initState();
     currentIndex = widget.selectedIndex;
+    print("Curent Index = $currentIndex");
   }
 
   void onTabTapped(int index) {
@@ -49,22 +54,32 @@ class _BottomMenuState extends State<BottomMenu> {
         elevation: 2,
         items: [
           _buildBottomNavigationBarItem(
-            icon: const Icon(size: 25, Icons.map_outlined, color: Colors.blue),
+            icon: Icon(
+              size: 25,
+              currentIndex == 0 ? Icons.map : Icons.map_outlined,
+              color: currentIndex == 0 ? Colors.deepOrange : Colors.blue,
+            ),
             label: 'My Trip',
             isSelected: currentIndex == 0,
           ),
 
           _buildBottomNavigationBarItem(
-            icon: const Icon(size: 25, Icons.home_outlined, color: Colors.blue),
+            icon: Icon(
+              size: 25,
+              currentIndex == 1 ? Icons.home : Icons.home_outlined,
+              color: currentIndex == 1 ? Colors.deepOrange : Colors.blue,
+            ),
             label: 'Home',
             isSelected: currentIndex == 1,
           ),
 
           _buildBottomNavigationBarItem(
-            icon: const Icon(
+            icon: Icon(
               size: 25,
-              Icons.account_circle_outlined,
-              color: Colors.blue,
+              currentIndex == 2
+                  ? Icons.account_circle
+                  : Icons.account_circle_outlined,
+              color: currentIndex == 2 ? Colors.deepOrange : Colors.blue,
             ),
             label: 'Account',
             isSelected: currentIndex == 2,
@@ -98,7 +113,7 @@ class _BottomMenuState extends State<BottomMenu> {
               label,
               style: TextStyle(
                 fontSize: 12,
-                color: Colors.blue,
+                color: isSelected ? Colors.deepOrange : Colors.blue,
                 fontWeight: FontWeight.w400,
               ),
               textAlign: TextAlign.center,

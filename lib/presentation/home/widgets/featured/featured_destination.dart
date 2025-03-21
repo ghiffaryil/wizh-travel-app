@@ -6,14 +6,16 @@ import 'package:intl/intl.dart';
 import 'package:wizhapp/models/list_destination_response_model.dart';
 import 'package:wizhapp/presentation/detail/detail_page.dart';
 
-class FeaturedDestination extends StatefulWidget {
-  const FeaturedDestination({super.key});
+class FeaturedDestinationSection extends StatefulWidget {
+  const FeaturedDestinationSection({super.key});
 
   @override
-  State<FeaturedDestination> createState() => _FeaturedDestinationState();
+  State<FeaturedDestinationSection> createState() =>
+      _FeaturedDestinationSectionState();
 }
 
-class _FeaturedDestinationState extends State<FeaturedDestination> {
+class _FeaturedDestinationSectionState
+    extends State<FeaturedDestinationSection> {
   final List<ListDestinationData> data = [];
   int currentIndex = 0;
 
@@ -38,61 +40,66 @@ class _FeaturedDestinationState extends State<FeaturedDestination> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      child: Column(
-        children: [
-          Expanded(
-            child: PageView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: data.length,
-              onPageChanged: (index) {
-                setState(() {
-                  currentIndex = index;
-                });
-              },
-              itemBuilder: (context, index) {
-                return _loadedData(data[index]);
-              },
+      width: double.infinity,
+      height: MediaQuery.of(context).size.height * 0.36,
+      child: Container(
+        padding: EdgeInsets.all(10),
+        child: Column(
+          children: [
+            Expanded(
+              child: PageView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: data.length,
+                onPageChanged: (index) {
+                  setState(() {
+                    currentIndex = index;
+                  });
+                },
+                itemBuilder: (context, index) {
+                  return featuredCard(data[index]);
+                },
+              ),
             ),
-          ),
 
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: List.generate(
-              data.length,
-              (index) => Container(
-                margin: EdgeInsets.symmetric(horizontal: 4.0),
-                width: currentIndex == index ? 20.0 : 8.0,
-                height: currentIndex == index ? 8.0 : 6.0,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: currentIndex == index ? Colors.blue : Colors.grey,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: List.generate(
+                data.length,
+                (index) => Container(
+                  margin: EdgeInsets.symmetric(horizontal: 4.0),
+                  width: currentIndex == index ? 20.0 : 8.0,
+                  height: currentIndex == index ? 8.0 : 6.0,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: currentIndex == index ? Colors.blue : Colors.grey,
+                  ),
                 ),
               ),
             ),
-          ),
-          SizedBox(height: 6),
-        ],
+            SizedBox(height: 6),
+          ],
+        ),
       ),
     );
   }
 
-  Widget _loadedData(ListDestinationData destinationData) {
+  Widget featuredCard(ListDestinationData destinationData) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        return InkWell(
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (_) {
-                  return DetailPage(destinationData: destinationData);
-                },
-              ),
-            );
-          },
-          child: Container(
-            margin: EdgeInsets.only(top: 2),
-            padding: EdgeInsets.symmetric(horizontal: 5),
+        return Container(
+          margin: EdgeInsets.only(top: 2),
+          padding: EdgeInsets.symmetric(horizontal: 5),
+          child: InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) {
+                    return DetailPage(destinationData: destinationData);
+                  },
+                ),
+              );
+            },
             child: Column(
               children: [
                 Stack(

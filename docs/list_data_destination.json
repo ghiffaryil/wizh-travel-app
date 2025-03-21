@@ -2,8 +2,8 @@
   "status": "success",
   "data": [
     {
-      "title": "Bali Beach",
-      "description": "Beautiful beach with white sand and clear water.",
+      "title": "Bali Island",
+      "description": "Beautiful Island with white sand and clear water.",
       "location": "Bali, Indonesia",
       "price": 20000100,
       "tax": 2000000,
@@ -18,7 +18,7 @@
         },
         {
           "user": "Jane Smith",
-          "comment": "Beautiful beach but a bit crowded.",
+          "comment": "Beautiful Island but a bit crowded.",
           "rating": 4
         }
       ],
@@ -74,7 +74,7 @@
     {
       "title": "Machu Picchu",
       "description": "Ancient Incan city with stunning views.",
-      "location": "Peru",
+      "location": "Cusco, Peru",
       "price": 20000180,
       "tax": 2000000,
       "total_pax_available": 150,
@@ -140,7 +140,7 @@
     {
       "title": "Niagara Falls",
       "description": "Spectacular waterfalls on the border of USA and Canada.",
-      "location": "USA/Canada",
+      "location": "Canada, USA",
       "price": 2000070,
       "tax": 2000000,
       "total_pax_available": 250,
@@ -236,7 +236,7 @@
     {
       "title": "Mount Fuji",
       "description": "Iconic mountain in Japan.",
-      "location": "Japan",
+      "location": "Tokyo, Japan",
       "price": 2000090,
       "tax": 2000000,
       "total_pax_available": 180,
